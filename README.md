@@ -2,6 +2,8 @@
 
 A complete MVP Jarvis-style robot assistant system with Python FastAPI backend and React Three.js frontend.
 
+![Interface Screenshot](public/Interface1.png)
+
 ## Features
 
 - **Real-time WebSocket Communication**: Instant command transmission from backend to frontend
