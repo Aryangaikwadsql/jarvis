@@ -1,5 +1,7 @@
 # Jarvis Robot Assistant System
 
+<img src="public/J.A.R.V.I.S.png" alt="JARVIS" width="500">
+
 A complete MVP Jarvis-style robot assistant system with Python FastAPI backend and React Three.js frontend.
 
 ![Interface Screenshot](public/Interface1.png)
