@@ -91,7 +91,6 @@ curl -X POST http://localhost:8000/send-command \
 
 ## System Architecture
 
-\`\`\`
 ┌─────────────────┐    WebSocket     ┌─────────────────┐
 │   Python        │ ◄──────────────► │   React         │
 │   FastAPI       │                  │   Three.js      │
@@ -101,27 +100,25 @@ curl -X POST http://localhost:8000/send-command \
 │ • REST API      │                  │ • Animations    │
 │ • Auto Commands │                  │ • Jarvis UI     │
 └─────────────────┘                  └─────────────────┘
-\`\`\`
+
 
 ## File Structure
 
-\`\`\`
 ├── scripts/
-│   ├── backend_server.py      # FastAPI WebSocket server
-│   ├── requirements.txt       # Python dependencies
-│   └── start_backend.sh       # Backend startup script
+│   ├── backend_server.py        # FastAPI WebSocket server
+│   ├── requirements.txt         # Python dependencies
+│   └── start_backend.sh         # Backend startup script
 ├── app/
-│   └── page.tsx              # Main React page
+│   └── page.tsx                 # Main React page
 ├── components/
-│   ├── robot.tsx             # 3D Robot component
-│   ├── robot-scene.tsx       # 3D Scene setup
-│   └── jarvis-ui.tsx         # Jarvis-style UI overlay
+│   ├── robot.tsx                # 3D Robot component
+│   ├── robot-scene.tsx          # 3D Scene setup
+│   └── jarvis-ui.tsx            # Jarvis-style UI overlay
 ├── hooks/
-│   ├── use-websocket.ts      # WebSocket connection hook
+│   ├── use-websocket.ts         # WebSocket connection hook
 │   └── use-animation-manager.ts # Animation state management
 └── public/models/
-    └── robot.glb             # 3D Robot model (with animations)
-\`\`\`
+    └── robot.glb                # 3D Robot model (with animations)
 
 ## Troubleshooting
 
@@ -157,6 +154,7 @@ curl -X POST http://localhost:8000/send-command \
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
+
 
 
 
