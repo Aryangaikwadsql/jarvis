@@ -89,37 +89,10 @@ curl -X POST http://localhost:8000/send-command \
 - `POST /send-command` - Send custom animation command
 - `WS /ws` - WebSocket connection for real-time commands
 
-## System Architecture
-
-┌─────────────────┐    WebSocket     ┌─────────────────┐
-│   Python        │ ◄──────────────► │   React         │
-│   FastAPI       │                  │   Three.js      │
-│   Backend       │                  │   Frontend      │
-│                 │                  │                 │
-│ • WebSocket     │                  │ • 3D Robot      │
-│ • REST API      │                  │ • Animations    │
-│ • Auto Commands │                  │ • Jarvis UI     │
-└─────────────────┘                  └─────────────────┘
-
-
-## File Structure
-
-├── scripts/
-│   ├── backend_server.py        # FastAPI WebSocket server
-│   ├── requirements.txt         # Python dependencies
-│   └── start_backend.sh         # Backend startup script
-├── app/
-│   └── page.tsx                 # Main React page
-├── components/
-│   ├── robot.tsx                # 3D Robot component
-│   ├── robot-scene.tsx          # 3D Scene setup
-│   └── jarvis-ui.tsx            # Jarvis-style UI overlay
-├── hooks/
-│   ├── use-websocket.ts         # WebSocket connection hook
-│   └── use-animation-manager.ts # Animation state management
-└── public/models/
-    └── robot.glb                # 3D Robot model (with animations)
-
+System Architecture
+<pre> ┌─────────────────┐ WebSocket ┌─────────────────┐ │ Python │ ◄──────────────► │ React │ │ FastAPI │ │ Three.js │ │ Backend │ │ Frontend │ │ │ │ │ │ • WebSocket │ │ • 3D Robot │ │ • REST API │ │ • Animations │ │ • Auto Commands │ │ • Jarvis UI │ └─────────────────┘ └─────────────────┘ </pre>
+File Structure
+<pre> ├── scripts/ │ ├── backend_server.py # FastAPI WebSocket server │ ├── requirements.txt # Python dependencies │ └── start_backend.sh # Backend startup script ├── app/ │ └── page.tsx # Main React page ├── components/ │ ├── robot.tsx # 3D Robot component │ ├── robot-scene.tsx # 3D Scene setup │ └── jarvis-ui.tsx # Jarvis-style UI overlay ├── hooks/ │ ├── use-websocket.ts # WebSocket connection hook │ └── use-animation-manager.ts # Animation state management └── public/models/ └── robot.glb # 3D Robot model (with animations) </pre>
 ## Troubleshooting
 
 ### Backend Issues
@@ -154,6 +127,7 @@ curl -X POST http://localhost:8000/send-command \
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
+
 
 
 
