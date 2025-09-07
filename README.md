@@ -3,7 +3,9 @@
 <img src="public/J.A.R.V.I.S.png" alt="JARVIS" width="500">
 
 <p align="right">
-  <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" width="120" alt="admiring-jarvis"/>
+  <img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" width="120" alt="Jarvis admiration meme"/>
+  <br>
+  <sub><i>"When Jarvis actually understands my command on the first try..."</i></sub>
 </p>
 
 A complete MVP Jarvis-style robot assistant system with Python FastAPI backend and React Three.js frontend.
@@ -155,5 +157,6 @@ curl -X POST http://localhost:8000/send-command \
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
+
 
 
