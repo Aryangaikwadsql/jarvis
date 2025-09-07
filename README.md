@@ -52,6 +52,14 @@ A complete MVP Jarvis-style robot assistant system with Python FastAPI backend a
    The frontend will be available at `http://localhost:3000`
 
 ## Usage
+- Activate with wake phrase (e.g., “Hey Jarvis”).
+- System listens → interprets → executes the command.
+- Provides short, text-only responses (no emojis or special characters).
+- Sends commands via WebSocket to trigger 3D robot animations.
+- HUD overlay shows live stats (CPU, memory, power, network) and command logs.
+- REST API available for sending custom animation commands.
+- Auto-demo loop can be enabled for continuous animation showcase.
+- Auto-reconnection ensures stable backend-frontend link.
 
 ### Automatic Demo
 - The backend automatically sends commands every 5 seconds in this sequence:
@@ -143,3 +151,4 @@ curl -X POST http://localhost:8000/send-command \
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
+
