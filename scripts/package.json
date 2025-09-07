@@ -1,0 +1,9 @@
+{
+  "name": "jarvis-backend",
+  "version": "1.0.0",
+  "description": "Jarvis Robot Assistant Backend Server",
+  "scripts": {
+    "start": "python backend_server.py",
+    "install": "pip install -r requirements.txt"
+  }
+}
