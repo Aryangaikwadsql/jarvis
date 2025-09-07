@@ -58,14 +58,6 @@ A complete MVP Jarvis-style robot assistant system with Python FastAPI backend a
    The frontend will be available at `http://localhost:3000`
 
 ## Usage
-- Activate with wake phrase (e.g., “Hey Jarvis”).
-- System listens → interprets → executes the command.
-- Provides short, text-only responses (no emojis or special characters).
-- Sends commands via WebSocket to trigger 3D robot animations.
-- HUD overlay shows live stats (CPU, memory, power, network) and command logs.
-- REST API available for sending custom animation commands.
-- Auto-demo loop can be enabled for continuous animation showcase.
-- Auto-reconnection ensures stable backend-frontend link.
 
 ### Automatic Demo
 - The backend automatically sends commands every 5 seconds in this sequence:
@@ -89,10 +81,40 @@ curl -X POST http://localhost:8000/send-command \
 - `POST /send-command` - Send custom animation command
 - `WS /ws` - WebSocket connection for real-time commands
 
-System Architecture
- ┌─────────────────┐ WebSocket ┌─────────────────┐ │ Python │ ◄──────────────► │ React │ │ FastAPI │ │ Three.js │ │ Backend │ │ Frontend │ │ │ │ │ │ • WebSocket │ │ • 3D Robot │ │ • REST API │ │ • Animations │ │ • Auto Commands │ │ • Jarvis UI │ └─────────────────┘ └─────────────────┘ 
-File Structure
- ├── scripts/ │ ├── backend_server.py # FastAPI WebSocket server │ ├── requirements.txt # Python dependencies │ └── start_backend.sh # Backend startup script ├── app/ │ └── page.tsx # Main React page ├── components/ │ ├── robot.tsx # 3D Robot component │ ├── robot-scene.tsx # 3D Scene setup │ └── jarvis-ui.tsx # Jarvis-style UI overlay ├── hooks/ │ ├── use-websocket.ts # WebSocket connection hook │ └── use-animation-manager.ts # Animation state management └── public/models/ └── robot.glb # 3D Robot model (with animations)
+## System Architecture
+
+\`\`\`
+┌─────────────────┐    WebSocket     ┌─────────────────┐
+│   Python        │ ◄──────────────► │   React         │
+│   FastAPI       │                  │   Three.js      │
+│   Backend       │                  │   Frontend      │
+│                 │                  │                 │
+│ • WebSocket     │                  │ • 3D Robot      │
+│ • REST API      │                  │ • Animations    │
+│ • Auto Commands │                  │ • Jarvis UI     │
+└─────────────────┘                  └─────────────────┘
+\`\`\`
+
+## File Structure
+
+\`\`\`
+├── scripts/
+│   ├── backend_server.py      # FastAPI WebSocket server
+│   ├── requirements.txt       # Python dependencies
+│   └── start_backend.sh       # Backend startup script
+├── app/
+│   └── page.tsx              # Main React page
+├── components/
+│   ├── robot.tsx             # 3D Robot component
+│   ├── robot-scene.tsx       # 3D Scene setup
+│   └── jarvis-ui.tsx         # Jarvis-style UI overlay
+├── hooks/
+│   ├── use-websocket.ts      # WebSocket connection hook
+│   └── use-animation-manager.ts # Animation state management
+└── public/models/
+    └── robot.glb             # 3D Robot model (with animations)
+\`\`\`
+
 ## Troubleshooting
 
 ### Backend Issues
@@ -127,9 +149,3 @@ File Structure
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
-
-
-
-
-
-
