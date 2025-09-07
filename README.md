@@ -58,6 +58,11 @@ A complete MVP Jarvis-style robot assistant system with Python FastAPI backend a
    The frontend will be available at `http://localhost:3000`
 
 ## Usage
+- Wake with: “Hey Jarvis”
+- System listens → interprets → executes → responds with short, text-only output.
+- During response, listening is paused → resumes only after speaking finishes.
+- Robot animations sync with commands.
+- HUD displays CPU, memory, power, and network in real time.
 
 ### Automatic Demo
 - The backend automatically sends commands every 5 seconds in this sequence:
@@ -149,3 +154,4 @@ curl -X POST http://localhost:8000/send-command \
 - Add new REST endpoints for additional functionality
 - Implement authentication or rate limiting as needed
 #
+
